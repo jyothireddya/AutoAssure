@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+<listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+</listeners>
+  <test thread-count="5" name="Tests">
+    <classes>
+      <class name="api.test.SerilizationDeserlizationTest"/>
+      <!--  <class name="api.test.DataDrivenTest"/>
+      <class name="api.test.SchemaValidationTest"/>
+      <class name="api.test.HamcrestTest"/>
+      <class name="api.test.JsonPathTests"/>
+      <class name="api.test.Chaining_createUser"/>
+      <class name="api.test.Chaining_readUser"/>
+       <class name="api.test.Chaining_UpdateUser"/>
+        <class name="api.test.Chaining_deleteUser"/>
+      <class name="api.test.RequestSpecBuilderResponseSpecBuilderTest"/>
+      <class name="api.test.AuthTests"/>-->
+    </classes>
+  </test> <!-- Tests -->
+</suite> <!-- Suite1 -->
