@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="3" parallel="tests" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="tests" name="Tests3(failed)">
-    <classes>
-      <class name="api.test.HamcrestTest">
-        <methods>
-          <include name="validateUserListResponse"/>
-        </methods>
-      </class> <!-- api.test.HamcrestTest -->
-    </classes>
-  </test> <!-- Tests3(failed) -->
   <test thread-count="3" parallel="tests" name="Tests2(failed)">
     <classes>
-      <class name="api.test.SchemaValidationTest">
+      <class name="api.test.DeleteUserChainingTest">
         <methods>
-          <include name="testSchemaValidation"/>
+          <include name="deleteUserTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- api.test.SchemaValidationTest -->
+      </class> <!-- api.test.DeleteUserChainingTest -->
     </classes>
   </test> <!-- Tests2(failed) -->
-  <test thread-count="3" parallel="tests" name="Tests4(failed)">
+  <test thread-count="3" parallel="tests" name="Tests(failed)">
     <classes>
-      <class name="api.test.JsonPathTests">
+      <class name="api.test.SerilizationDeseriliztionTest">
         <methods>
-          <include name="testAllFirstNames"/>
-          <include name="testJsonPathApproach2"/>
-          <include name="testJsonPathApproach1"/>
-          <include name="testFirstNameExists"/>
+          <include name="testDeserializationToStudentPOJO"/>
+          <include name="testSerializationUsingPOJO"/>
         </methods>
-      </class> <!-- api.test.JsonPathTests -->
+      </class> <!-- api.test.SerilizationDeseriliztionTest -->
     </classes>
-  </test> <!-- Tests4(failed) -->
-  <test thread-count="3" parallel="tests" name="Tests1(failed)">
-    <classes>
-      <class name="api.test.DataDrivenTest">
-        <methods>
-          <include name="testDeleteUserByName" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- api.test.DataDrivenTest -->
-    </classes>
-  </test> <!-- Tests1(failed) -->
+  </test> <!-- Tests(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

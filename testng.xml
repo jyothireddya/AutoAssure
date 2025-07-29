@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite1">
-  <test thread-count="5" name="Tests">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="api.test.SerilizationDeserlizationTest"/>
+     <class name="api.test.UserChainingTest"/>
+      <class name="api.test.ReadUserChainingTest"/>
+      <class name="api.test.UpdateUserChainingTest"/>
+        <class name="api.test.DeleteUserChainingTest"/>
+        
       <class name="api.test.DataDrivenTest"/>
+      <class name="api.test.SerilizationDeseriliztionTest"/>
+      <class name="api.test.AuthenticationTests"/>
       <class name="api.test.SchemaValidationTest"/>
-      <class name="api.test.HamcrestTest"/>
-      <class name="api.test.Chaining_UpdateUser"/>
       <class name="api.test.JsonPathTests"/>
-      <class name="api.test.Chaining_deleteUser"/>
-      <class name="api.test.Chaining_readUser"/>
-      <class name="api.test.Chaining_createUser"/>
-      <class name="api.test.RequestSpecBuilderResponseSpecBuilderTest"/>
-      <class name="api.test.AuthTests"/>
     </classes>
-  </test> <!-- Tests -->
-</suite> <!-- Suite1 -->
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,43 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="tests" name="Tests3(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.test.HamcrestTest">
+      <class name="api.test.SerilizationDeseriliztionTest">
         <methods>
-          <include name="validateUserListResponse"/>
+          <include name="testDeserializationToStudentPOJO"/>
+          <include name="testSerializationUsingPOJO"/>
         </methods>
-      </class> <!-- api.test.HamcrestTest -->
+      </class> <!-- api.test.SerilizationDeseriliztionTest -->
     </classes>
-  </test> <!-- Tests3(failed) -->
-  <test thread-count="3" parallel="tests" name="Tests2(failed)">
-    <classes>
-      <class name="api.test.SchemaValidationTest">
-        <methods>
-          <include name="testSchemaValidation"/>
-        </methods>
-      </class> <!-- api.test.SchemaValidationTest -->
-    </classes>
-  </test> <!-- Tests2(failed) -->
-  <test thread-count="3" parallel="tests" name="Tests4(failed)">
-    <classes>
-      <class name="api.test.JsonPathTests">
-        <methods>
-          <include name="testAllFirstNames"/>
-          <include name="testJsonPathApproach2"/>
-          <include name="testJsonPathApproach1"/>
-          <include name="testFirstNameExists"/>
-        </methods>
-      </class> <!-- api.test.JsonPathTests -->
-    </classes>
-  </test> <!-- Tests4(failed) -->
-  <test thread-count="3" parallel="tests" name="Tests1(failed)">
-    <classes>
-      <class name="api.test.DataDrivenTest">
-        <methods>
-          <include name="testDeleteUserByName" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- api.test.DataDrivenTest -->
-    </classes>
-  </test> <!-- Tests1(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

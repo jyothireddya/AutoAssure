@@ -1,40 +1,46 @@
 package api.payload;
 
 public class POJO {
-	  public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getFirst_name() {
-		return first_name;
-	}
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
-	}
-	public String getLast_name() {
-		return last_name;
-	}
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
-	}
-	public String getAvatar() {
-		return avatar;
-	}
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-	  int id;
-	    String email;
-	     String first_name;
-	     String last_name;
-	   String avatar;
+
+	 private String firstName;
+	    private String lastName;
+	    private int age;
+
+	    // Default constructor
+	    public POJO() {
+	    }
+
+	    // Parameterized constructor
+	    public POJO(String firstName, String lastName, int age) {
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.age = age;
+	    }
+
+	    // Getters and setters
+	    public String getFirstName() {
+	        return firstName;
+	    }
+	    public void setFirstName(String firstName) {
+	        this.firstName = firstName;
+	    }
+	    public String getLastName() {
+	        return lastName;
+	    }
+	    public void setLastName(String lastName) {
+	        this.lastName = lastName;
+	    }
+	    public int getAge() {
+	        return age;
+	    }
+	    public void setAge(int age) {
+	        this.age = age;
+	    }
+
+	    // toString
+	    @Override
+	    public String toString() {
+	        return firstName + " " + lastName + ", Age: " + age;
+	    }
 
 }

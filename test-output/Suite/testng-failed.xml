@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ChainingTests(failed)">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="api.test.Chaining_readUser">
+      <class name="api.test.SerilizationDeseriliztionTest">
         <methods>
-          <include name="CreateUser" invocation-numbers="0"/>
+          <include name="testDeserializationToStudentPOJO"/>
+          <include name="testSerializationUsingPOJO"/>
         </methods>
-      </class> <!-- api.test.Chaining_readUser -->
-      <class name="api.test.Chaining_UpdateUser">
+      </class> <!-- api.test.SerilizationDeseriliztionTest -->
+      <class name="api.test.SchemaValidationTest">
         <methods>
-          <include name="updateUser" invocation-numbers="0"/>
+          <include name="testJsonSchemaValidation"/>
         </methods>
-      </class> <!-- api.test.Chaining_UpdateUser -->
-      <class name="api.test.Chaining_deleteUser">
+      </class> <!-- api.test.SchemaValidationTest -->
+      <class name="api.test.DataDrivenTest">
         <methods>
-          <include name="deleteUser" invocation-numbers="0"/>
+          <include name="testCreateAndDeleteUser" invocation-numbers="0"/>
         </methods>
-      </class> <!-- api.test.Chaining_deleteUser -->
+      </class> <!-- api.test.DataDrivenTest -->
     </classes>
-  </test> <!-- ChainingTests(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

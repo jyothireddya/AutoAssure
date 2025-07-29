@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="APIAutomationSuite" parallel="false">
+
+    <!-- Sanity Suite -->
+    <test name="SanitySuite">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <exclude name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.SerilizationDeseriliztionTest"/>
+            <class name="api.test.AuthenticationTests"/>
+        </classes>
+    </test>
+
+    <!-- Regression Suite -->
+    <test name="RegressionSuite">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.SerilizationDeseriliztionTest"/>
+            <class name="api.test.AuthenticationTests"/>
+            <class name="api.test.JsonPathTests"/>
+            <class name="api.test.SchemaValidationTest"/>
+            <class name="api.test.DataDrivenTest"/>
+        </classes>
+    </test>
+
+    <!-- Functionality Tests -->
+    <test name="FunctionalitySuite">
+        <groups>
+            <run>
+                <include name="functionality"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.SerilizationDeseriliztionTest"/>
+            <class name="api.test.JsonPathTests"/>
+        </classes>
+    </test>
+
+    <!-- Data-Driven Tests -->
+    <test name="DataDrivenSuite">
+        <groups>
+            <run>
+                <include name="datadriven"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.DataDrivenTest"/>
+        </classes>
+    </test>
+
+    <!-- Authentication Tests -->
+    <test name="AuthenticationSuite">
+        <groups>
+            <run>
+                <include name="authentication"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.AuthenticationTests"/>
+        </classes>
+    </test>
+
+    <!-- Schema Validation -->
+    <test name="SchemaValidationSuite">
+        <groups>
+            <run>
+                <include name="schema"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.SchemaValidationTest"/>
+        </classes>
+    </test>
+
+    <!-- JSONPath Assertions -->
+    <test name="JsonPathSuite">
+        <groups>
+            <run>
+                <include name="jsonpath"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="api.test.JsonPathTests"/>
+        </classes>
+    </test>
+
+</suite>

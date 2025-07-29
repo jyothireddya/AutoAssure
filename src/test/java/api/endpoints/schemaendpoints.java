@@ -1,18 +1,20 @@
 package api.endpoints;
 
-import static io.restassured.RestAssured.given;
 
+
+import api.utils.SpecBuilder;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class schemaendpoints {
+public class SchemaEndpoints {
 
 
-	 public static Response SchemaValidation() {
-	   Response res = given()
 
-		
-	   .when()
-	   .get(Routes.Schema_requers_url);
-	   return res;
-
-}}
+    public static Response getUsersForSchemaValidation() {
+        return RestAssured.given()
+                .spec(SpecBuilder.schemaSpec())
+                .when()
+                .get();
+    }
+	 
+}

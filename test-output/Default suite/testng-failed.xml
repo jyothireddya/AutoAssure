@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.test.SerilizationDeserlizationTest">
+      <class name="api.test.SerilizationDeseriliztionTest">
         <methods>
-          <include name="convertJsonToPOJO"/>
+          <include name="testDeserializationToStudentPOJO"/>
+          <include name="testSerializationUsingPOJO"/>
         </methods>
-      </class> <!-- api.test.SerilizationDeserlizationTest -->
+      </class> <!-- api.test.SerilizationDeseriliztionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

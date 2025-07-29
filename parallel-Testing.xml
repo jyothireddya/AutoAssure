@@ -3,43 +3,33 @@
 <suite name="Suite1" parallel="tests" thread-count="3">
   <test name="Tests">
     <classes>
-      <class name="api.test.SerilizationDeserlizationTest"/>
+    <class name="api.test.SerilizationDeseriliztionTest"/>
     </classes>
   </test> <!-- Tests -->
   
   <test  name="Tests1">
     <classes>
-      <class name="api.test.DataDrivenTest"/>
+      <class name="api.test.AuthenticationTests"/>
     </classes>
   </test> <!-- Tests -->
   
   <test  name="Tests2">
     <classes>
- <class name="api.test.SchemaValidationTest"/>
+ <class name="api.test.DeleteUserChainingTest"/>
     </classes>
   </test> <!-- Tests -->
   
     <test  name="Tests3">
     <classes>
- <class name="api.test.HamcrestTest"/>
+ <class name="api.test.SchemaValidationTest"/>
     </classes>
   </test> <!-- Tests -->
   
     <test  name="Tests4">
     <classes>
- <class name="api.test.JsonPathTests"/>
+       <class name="api.test.JsonPathTests"/>
+
     </classes>
   </test> <!-- Tests -->
   
-    <test  name="Tests5">
-    <classes>
-  <class name="api.test.RequestSpecBuilderResponseSpecBuilderTest"/>
-    </classes>
-  </test> <!-- Tests -->
-  
-    <test  name="Tests6">
-    <classes>
- <class name="api.test.AuthTests"/>
-    </classes>
-  </test> <!-- Tests -->
 </suite> <!-- Suite1 -->
